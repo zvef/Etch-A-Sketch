@@ -1,0 +1,75 @@
+/* MAIN ELEMENTS */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    background-color: tomato;
+}
+
+
+header {
+    padding: 1rem 2rem 4rem;
+}
+
+.moreAlmightyContainer {
+    display: flex;
+}
+
+.almightyContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    /* max-width: 750px; */
+    /* max-height: 750px; */
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.column {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-style:outset;
+    border-color: black;
+}
+
+.newColumn {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-style:outset;
+    border-color: black;
+}
+
+/* .column:hover {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-style:outset;
+    border-color: black;
+} */
+
+.button {
+    padding-bottom: 25px;
+}
+
+#butt {
+    background-color: tomato;
+    border-style: solid;
+    border-color: black;
+    color: black;
+    border-radius: 7px;
+}
+
+#butt:hover {
+    background-color: black;
+    border-color: black;
+    color: tomato;
+}
