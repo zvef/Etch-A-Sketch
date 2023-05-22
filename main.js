@@ -1,11 +1,12 @@
-
-//CALL TO CREATE A GRID :D
-//      \/\/\/\/
 makeGrid(16, 16); 
 
+const hoverDivs = [...document.querySelectorAll('.column')];
 
 
-// GRID CREATION FUNCTIONS
+let changeColor = false;
+
+
+
 
 function makeGridColumn(num) {
     let htmlElements = '<div class="column" id="div"></div>';
@@ -46,7 +47,30 @@ function changeDivColor() {
     }
 }
 
-changeDivColor();
+hoverDivs.forEach(hoverDiv => {
+    hoverDiv.addEventListener('mousedown', () => {
+        hoverDiv.style.backgroundColor = "black";
+        changeColor = true;
+    });
+
+    hoverDiv.addEventListener('mouseup', () => {
+        changeColor = false;
+    })
+
+    hoverDiv.addEventListener('mouseover', () => {
+        if(changeColor){
+            hoverDiv.style.backgroundColor = "black";
+        }
+    });
+});
+
+
+// function addMouseOver() {
+//     let booly = false;
+
+
+// }
+
 
 
 
