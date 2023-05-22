@@ -1,10 +1,10 @@
 makeGrid(16, 16); 
 
 const hoverDivs = [...document.querySelectorAll('.column')];
-
+const resetButton = document.getElementById('butt');
 
 let changeColor = false;
-
+let resetColor = false;
 
 
 
@@ -30,23 +30,6 @@ function makeGrid(num1, num2) {
     makeColumnClone(num2);
 }
 
-function changeDivColor() {
-    let containerDivs = document.getElementById('container');
-    let columnDivs = document.getElementById('div');
-    let almightyContainer = document.getElementById('almightyContainer');
-
-
-    for(let i = 0; i < almightyContainer.childNodes.length-3; i++){
-        for (let j = 0; j < containerDivs.childNodes.length-3; j++){
-            if(document.getElementById('div')){
-                document.querySelector('.column').addEventListener('mouseenter', function () {
-                    columnDivs.style.backgroundColor = 'black';
-                });
-            }
-        }
-    }
-}
-
 hoverDivs.forEach(hoverDiv => {
     hoverDiv.addEventListener('mousedown', () => {
         hoverDiv.style.backgroundColor = "black";
@@ -64,21 +47,43 @@ hoverDivs.forEach(hoverDiv => {
     });
 });
 
+resetButton.addEventListener('click', () => {
+    hoverDivs.forEach(buttDiv => {
+        if(buttDiv.style.backgroundColor == 'black') {
+            resetColor = true;
+        }
 
-// function addMouseOver() {
-//     let booly = false;
-
-
-// }
-
-
-
-
-
-
-
+        if(resetButton){
+            buttDiv.style.backgroundColor = 'white';
+        }
+    });
+});
 
 
+
+
+
+
+
+
+
+
+//function changeDivColor() {
+    //     let containerDivs = document.getElementById('container');
+    //     let columnDivs = document.getElementById('div');
+    //     let almightyContainer = document.getElementById('almightyContainer');
+    
+    
+    //     for(let i = 0; i < almightyContainer.childNodes.length-3; i++){
+    //         for (let j = 0; j < containerDivs.childNodes.length-3; j++){
+    //             if(document.getElementById('div')){
+    //                 document.querySelector('.column').addEventListener('mouseenter', function () {
+    //                     columnDivs.style.backgroundColor = 'black';
+    //                 });
+    //             }
+    //         }
+    //     }
+    // }
 
 
 
